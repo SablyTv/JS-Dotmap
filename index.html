@@ -13,9 +13,11 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function(){
-      $.getJSON("dots.json", function(json) {
+      fetch('https://raw.githubusercontent.com/SablyTv/JS-Dotmap/main/dots.json')
+      .then(response => response.json())
+      .then(data => {
         var map = new DotMap($('.map'), 153, 76);
-        map.update(json);
+        map.update(data);
       });
     });
 </script>

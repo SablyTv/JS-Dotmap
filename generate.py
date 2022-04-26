@@ -3,7 +3,7 @@ import cv2
 
 dots = []
 
-img = cv2.imread('world.jpg')
+img = cv2.imread('world.png')
 
 # loop trough all pixels in image
 for i in range(img.shape[0]):
@@ -11,12 +11,12 @@ for i in range(img.shape[0]):
         px = img[i, j]
         if px[0] == 255 and px[1] == 255 and px[2] == 255:
             dots.append({
-                'water': True,
+                'water': False,
                 "generations": []
             })
         else:
             dots.append({
-                'water': False,
+                'water': True,
                 "generations": []
             })
 
