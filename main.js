@@ -61,7 +61,7 @@ class DotMap {
             $dot.css('background-color', dot.color);
             $dot.attr("id", `dot-${i}`);
 
-            if (!dot.water)
+            if (dot.water)
                 $dot.addClass('disabled');
 
             this.mapElement.append($dot);
