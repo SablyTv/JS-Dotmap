@@ -11,12 +11,12 @@ for i in range(img.shape[0]):
         px = img[i, j]
         if px[0] == 255 and px[1] == 255 and px[2] == 255:
             dots.append({
-                'water': False,
+                'water': True,
                 "generations": []
             })
         else:
             dots.append({
-                'water': True,
+                'water': False,
                 "generations": []
             })
 
