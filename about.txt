@@ -1,0 +1,24 @@
+This website using jquery will generate a dot map representing earth.
+Each dot should contain some keys and values, example shown below.
+
+{
+    "position": [50, 10],
+    "count": 5,
+    "generation_ids": [
+        1,
+        8,
+        64
+        23,
+        524
+    ]
+}
+
+Each dot represents a collection of generations and stores the generation ids
+as a list. Position represent where in pixels the dot are in the container.
+Count represents how many generations the dot has.
+Count also changes the color on the dot depending on: dot.count / totalGenerations
+
+min: #212044
+max: #2961F1
+
+Using lerp to pick the color for the dot.
